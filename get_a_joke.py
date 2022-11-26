@@ -1,6 +1,11 @@
 import requests
 from random import choice
+import pyfiglet
+from termcolor import colored
 
+header = pyfiglet.figlet_format('Random Jokes')
+header = colored(header, color='green')
+print(header)
 user_input = input('What would you like to search for? ')
 url = 'https://icanhazdadjoke.com/search'
 res = requests.get(url,
